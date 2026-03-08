@@ -1,0 +1,14 @@
+const mongoose = require('mongoose');
+
+const supplierSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  }
+}, { versionKey: false });
+
+module.exports = mongoose.model('Supplier', supplierSchema);
